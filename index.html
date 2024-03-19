@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Encriptador Challenge</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body onLoad="scroll();">
+    <div class="content">
+      <h2 class="encriptador_tittle">Encriptador</h2>
+      <div class="content-areas">
+          <div class="letter">
+            <img src="Imagenes/alura.png" />
+          </div>
+
+        <div class="area1">
+          <textarea
+            name="mensaje1"
+            id="mensaje1"
+            class="textarea-enc"
+            rows="10"
+            cols="50"
+            placeholder="Escribe aquí tu mensaje"
+          ></textarea>
+
+          <div class="alert-div">
+            <img src="Imagenes/alert2.png" />
+            <input
+              type="text"
+              class="input-alert-message"
+              value="Solo letras minúsculas y sin acentos"
+              readonly
+            />
+          </div>
+
+          <div class="btn-content">
+            <button
+              name="encriptar"
+              onclick="encriptar()"
+              class="btn-encriptar"
+            >
+              Encriptar
+            </button>
+            <button
+              name="recibir"
+              onclick="desencriptar()"
+              class="btn-desencriptar"
+            >
+              Desencriptar
+            </button>
+          </div>
+        </div>
+
+        <div class="area2">
+          <textarea
+            name="mensaje2"
+            id="mensaje2"
+            class="textarea-dec no-visible"
+            rows="10"
+            cols="50"
+            readonly
+            placeholder="Aquí se verá tu mensaje encriptado/desencriptado"
+          ></textarea>
+          <div class="textarea-background" id="textarea-background-id">
+            <img
+              src="Imagenes/nada.png"
+              alt="image-nada"
+              name="image-nada"
+              class="image-nada"
+            />
+            <h1 class="text-center" style="display: block">
+              Ningún mensaje fue encontrado
+            </h1>
+            <h3 class="text-center2" style="display: block">
+              Ingrese el texto que desee encriptar o desencriptar.
+            </h3>
+          </div>
+          
+          <div class="btn-content-copy" name="btn-content-copy">
+            <div class="alert-div2">
+              <input
+                type="text"
+                class="input-alert-message"
+                value=""
+                readonly
+              />
+            </div>
+
+            <div class="btn-copy-class">
+              <button
+                name="copiar"
+                id="copiar"
+                onclick="copiarAlPortapapeles()"
+                class="btn-copy"
+                style="display: none"
+              >
+                Copiar
+              </button>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    <footer>
+        <form name="frm" class="frm-rodapie">
+          <div class="rodapie-topo">
+            <div class="container"><a href="#" class="rodapie-topo__label">
+              <input type="text" name="w" class="rodapie" readonly />
+              </a>
+          </div>
+        </form>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
